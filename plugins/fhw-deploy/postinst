@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+sed -i -e 's/^XKBMODEL.*$/XKBMODEL="pc105"/g' /etc/default/keyboard
+sed -i -e 's/^XKBLAYOUT.*$/XKBLAYOUT="de"/g' /etc/default/keyboard
+sed -i -e 's/^XKBVARIANT.*$/XKBVARIANT="nodeadkeys"/g' /etc/default/keyboard
+dpkg-reconfigure keyboard-configuration
