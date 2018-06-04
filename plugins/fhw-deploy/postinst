@@ -11,3 +11,9 @@ sed -i -e 's/^XKBMODEL.*$/XKBMODEL="pc105"/g' /etc/default/keyboard
 sed -i -e 's/^XKBLAYOUT.*$/XKBLAYOUT="de"/g' /etc/default/keyboard
 sed -i -e 's/^XKBVARIANT.*$/XKBVARIANT="nodeadkeys"/g' /etc/default/keyboard
 dpkg-reconfigure console-setup
+
+#use ntp instead of timesyncd
+systemctl stop systemd-timesyncd
+systemctl disable systemd-timesyncd
+​/etc/init.d/ntp stop
+​/etc/init.d/ntp start
