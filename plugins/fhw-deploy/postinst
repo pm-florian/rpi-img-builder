@@ -15,5 +15,3 @@ dpkg-reconfigure console-setup
 #use ntp instead of timesyncd
 systemctl stop systemd-timesyncd
 systemctl disable systemd-timesyncd
-​systemctl stop ntp
-​systemctl start ntp
