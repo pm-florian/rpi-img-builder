@@ -1,1 +1,1 @@
-htop keyboard-configuration console-setup screen libvncserver-dev libconfig++-dev
+htop keyboard-configuration console-setup screen libvncserver-config libconfig++9v5
