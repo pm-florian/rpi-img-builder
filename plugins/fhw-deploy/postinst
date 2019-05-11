@@ -11,3 +11,6 @@ sed -i -e 's/^XKBMODEL.*$/XKBMODEL="pc105"/g' /etc/default/keyboard
 sed -i -e 's/^XKBLAYOUT.*$/XKBLAYOUT="de"/g' /etc/default/keyboard
 sed -i -e 's/^XKBVARIANT.*$/XKBVARIANT="nodeadkeys"/g' /etc/default/keyboard
 dpkg-reconfigure console-setup
+
+apt-get update
+apt-get install -y uv4l uv4l-raspicam uv4l-raspicam-extras uv4l-webrtc
