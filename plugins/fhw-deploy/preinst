@@ -5,3 +5,4 @@ set -e
 #uv4l: https://www.linux-projects.org/uv4l/
 wget http://www.linux-projects.org/listing/uv4l_repo/lpkey.asc -O rootfs/apt-keys/uv4l_lpkey.asc
 echo "deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/stretch stretch main" >> /etc/apt/sources.list
+apt-get update
