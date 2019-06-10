@@ -12,5 +12,11 @@ sed -i -e 's/^XKBLAYOUT.*$/XKBLAYOUT="de"/g' /etc/default/keyboard
 sed -i -e 's/^XKBVARIANT.*$/XKBVARIANT="nodeadkeys"/g' /etc/default/keyboard
 dpkg-reconfigure console-setup
 
+#uv4l
 apt-get update
 apt-get install -y uv4l uv4l-raspicam uv4l-raspicam-extras uv4l-webrtc
+sed -i -e 's/^encoding = mjpeg.*$/encoding = h264/g' /etc/uv4l/uv4l-raspicam.conf
+sed -i -e 's/^# width.*$/width = 1640/g' /etc/uv4l/uv4l-raspicam.conf
+sed -i -e 's/^# height.*$/height = 1232/g' /etc/uv4l/uv4l-raspicam.conf
+sed -i -e 's/^framerate.*$/framerate = 10/g' /etc/uv4l/uv4l-raspicam.conf
+sed -i -e 's/^#custom-sensor-config.*$/custom-sensor-config = 4/g' /etc/uv4l/uv4l-raspicam.conf
